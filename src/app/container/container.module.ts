@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ContainerPageRoutingModule } from './container-routing.module';
 
 import { ContainerPage } from './container.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     ContainerPageRoutingModule
   ],
   declarations: [ContainerPage]
