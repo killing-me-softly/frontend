@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./container/container.module').then(m => m.ContainerPageModule)
   },
   {
+    path: 'sign-in',
+    loadChildren: () => import('./container/sign-in-form/sign-in-form.module').then(m => m.SignInFormModule)
+  },
+  {
     path: '',
     redirectTo: 'container',
     pathMatch: 'full'

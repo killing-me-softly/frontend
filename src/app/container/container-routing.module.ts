@@ -16,6 +16,10 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'sign-in',
+        loadChildren: () => import('./sign-in-form/sign-in-form.module').then(m => m.SignInFormModule)
       }
     ],
   }
