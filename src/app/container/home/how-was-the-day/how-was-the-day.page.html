@@ -11,20 +11,20 @@
 
 <ion-content>
   <mat-stepper style="height: 100%">
-    <mat-step label="Step 1" state="phone">
+    <mat-step state="phone">
       <p>Put down your phones.</p>
       <div>
         <button mat-button matStepperNext>Next</button>
       </div>
     </mat-step>
-    <mat-step label="Step 2" state="chat">
+    <mat-step state="chat">
       <p>Socialize with each other.</p>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </div>
     </mat-step>
-    <mat-step label="Step 3">
+    <mat-step>
       <app-feelings></app-feelings>
     </mat-step>
 
