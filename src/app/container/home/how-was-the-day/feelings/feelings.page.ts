@@ -10,10 +10,10 @@ import { Feeling } from '../../../../models/feeling';
 export class FeelingsPage implements OnInit {
   feelings: Feeling[];
 
-  constructor(private feelingsService: DataService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.feelingsService.fetchFeelings().subscribe(feelings => {
+    this.dataService.fetchFeelings().subscribe(feelings => {
       this.feelings = feelings.slice();
     });
   }

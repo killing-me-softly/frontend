@@ -1,3 +1,4 @@
+<div class="page">
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -9,25 +10,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="page">
   <mat-stepper style="height: 100%">
-    <mat-step label="Step 1" state="phone">
-      <p>Put down your phones.</p>
+    <mat-step>
+      <app-what-did-he-say></app-what-did-he-say>
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button color="warn" matStepperNext>הבא</button>
       </div>
     </mat-step>
-    <mat-step label="Step 2" state="chat">
-      <p>Socialize with each other.</p>
+    <mat-step>
+      <app-activities></app-activities>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <ion-button mat-button color="warn" matStepperPrevious>הקודם</ion-button>
+        <ion-button mat-button color="warn" matStepperNext>הבא</ion-button>
       </div>
     </mat-step>
-    <mat-step label="Step 3">
+    <mat-step>
       <app-feelings></app-feelings>
+      <div>
+        <ion-button mat-button color="warn" matStepperPrevious>הקודם</ion-button>
+        <ion-button mat-button color="warn" matStepperNext>הבא</ion-button>
+      </div>
     </mat-step>
-
     <!-- Icon overrides. -->
     <ng-template matStepperIcon="phone">
       <mat-icon>call_end</mat-icon>
@@ -38,3 +42,4 @@
   </mat-stepper>
 
 </ion-content>
+</div>
