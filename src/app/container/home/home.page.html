@@ -7,32 +7,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <mat-stepper>
-    <mat-step label="Step 1" state="phone">
-      <p>Put down your phones.</p>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="Step 2" state="chat">
-      <p>Socialize with each other.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="Step 3">
-      <p>You're welcome.</p>
-    </mat-step>
-
-    <!-- Icon overrides. -->
-    <ng-template matStepperIcon="phone">
-      <mat-icon>call_end</mat-icon>
-    </ng-template>
-    <ng-template matStepperIcon="chat">
-      <mat-icon>forum</mat-icon>
-    </ng-template>
-  </mat-stepper>
   <ion-content>
     <ion-grid>
       <ion-row class="ion-justify-content-center ion-text-right">
@@ -43,7 +17,7 @@
       <ion-row class="ion-justify-content-center">
         <ion-col size-md="8" size-lg="6" size-xl="4">
           <ion-card class="ion-activatable ripple-parent d-flex"
-                    (click)="downloadApp()">
+                    (click)="moveToHowWasYourDay()">
             <ion-ripple-effect></ion-ripple-effect>
             <ion-card-content class="d-flex align-items-center flex-row justify-content-center ion-text-center w-100 h-100">
               <div class="content-container">

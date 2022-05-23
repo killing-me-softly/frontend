@@ -19,9 +19,6 @@ import { SharedModule } from '../../shared/shared.module';
     ReactiveFormsModule,
     IonicModule,
     SharedModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatStepperModule,
     HomePageRoutingModule,
   ],
   declarations: [HomePage]

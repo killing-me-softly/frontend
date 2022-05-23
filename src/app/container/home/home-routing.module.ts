@@ -25,6 +25,10 @@ const routes: Routes = [
       //   loadChildren: () => import('./my-tickets/my-tickets.module').then( m => m.MyTicketsPageModule)
       // }
     ],
+  },
+  {
+    path: 'how-was-the-day',
+    loadChildren: () => import('./how-was-the-day/how-was-the-day.module').then( m => m.HowWasTheDayPageModule)
   }
 ];
 
