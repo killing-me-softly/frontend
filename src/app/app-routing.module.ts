@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./container/container.module').then(m => m.ContainerPageModule)
   },
   {
-    path: 'feelings',
-    loadChildren: () => import('./feelings/feelings.module').then(m => m.FeelingsPageModule)
-  },
-  {
     path: '',
     redirectTo: 'container',
     pathMatch: 'full'

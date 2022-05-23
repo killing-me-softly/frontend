@@ -15,6 +15,9 @@ import { FeelingsPage } from './feelings.page';
     IonicModule,
     FeelingsPageRoutingModule
   ],
+  exports: [
+    FeelingsPage
+  ],
   declarations: [FeelingsPage]
 })
 export class FeelingsPageModule {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Feeling } from '../models/feeling';
-import { FeelingsService } from '../services/feelings.service';
+import { FeelingsService } from '../../../../services/feelings.service';
+import { Feeling } from '../../../../models/feeling';
 
 @Component({
   selector: 'app-feelings',
@@ -13,8 +13,8 @@ export class FeelingsPage implements OnInit {
   constructor(private feelingsService: FeelingsService) { }
 
   ngOnInit() {
-   this.feelingsService.fetchAll().subscribe(feelings => {
-     this.feelings = feelings.slice();
-   });
+    this.feelingsService.fetchAll().subscribe(feelings => {
+      this.feelings = feelings.slice();
+    });
   }
 }

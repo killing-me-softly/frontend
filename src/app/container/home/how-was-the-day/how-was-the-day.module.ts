@@ -10,6 +10,7 @@ import { HowWasTheDayPage } from './how-was-the-day.page';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
+import { FeelingsPageModule } from './feelings/feelings.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatFormFieldModule,
     MatInputModule,
     MatStepperModule,
-    HowWasTheDayPageRoutingModule
+    HowWasTheDayPageRoutingModule,
+    FeelingsPageModule
   ],
   declarations: [HowWasTheDayPage]
 })
