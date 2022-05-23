@@ -1,0 +1,16 @@
+.feelings-box {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  text-align: center;
+}
+
+.feeling{
+  width: 80%;
+  --border-radius: 25px;
+}
+
+.text{
+  margin-left: 50%;
+}
