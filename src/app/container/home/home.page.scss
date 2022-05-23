@@ -1,9 +1,44 @@
 ion-card {
   width: 80%;
-  height: 40%;
+  height: 20%;
+  border-radius: 10px;
+  border: 2px #cab0d1 solid
 }
+
+ion-card-content {
+  font-size: 14px;
+}
+
 ion-col {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+ion-icon {
+  font-size: 50pt;
+}
+
+.header-text {
+  width: 48%;
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.description-text {
+  width: 88%;
+  font-size: 10pt;
+  margin-bottom: 24%;
+  padding-bottom: 10%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: green;
+}
+
+.content-container {
+  display: flex;
 }

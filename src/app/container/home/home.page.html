@@ -42,13 +42,16 @@
       </ion-row>
       <ion-row class="ion-justify-content-center">
         <ion-col size-md="8" size-lg="6" size-xl="4">
-          <ion-card style="border: 2px #cab0d1 solid ;" class="ion-activatable ripple-parent d-flex" (click)="downloadApp()">
+          <ion-card class="ion-activatable ripple-parent d-flex"
+                    (click)="downloadApp()">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-card-content style="font-size: 14px;"  class="d-flex align-items-center flex-row justify-content-center ion-text-center w-100 h-100">
-              <div style="display: flex">
-                <div style="display: flex; flex-direction: column">
-                  <ion-label style="width: 40%;font-size: 8pt;font-weight: bold;">בואי נבין יחד איך עבר עלייך היום?</ion-label>
-                  <ion-label style="width: 60%">כמה שאלות קצרות שיעזרו לך לתעד ביומן אישי את מה שעובר עלייך בכל יום</ion-label>
+            <ion-card-content class="d-flex align-items-center flex-row justify-content-center ion-text-center w-100 h-100">
+              <div class="content-container">
+                <div class="text-container">
+                  <ion-label class="header-text">בואי נבין יחד איך עבר עלייך היום?</ion-label>
+                  <ion-label class="description-text">כמה שאלות קצרות שיעזרו לך לתעד ביומן אישי את מה שעובר עלייך בכל
+                    יום
+                  </ion-label>
                 </div>
 
                 <div>
@@ -58,10 +61,41 @@
             </ion-card-content>
           </ion-card>
 
-          <ion-card class="ion-activatable ripple-parent d-flex" (click)="shareToBusinesses()">
+          <ion-card class="ion-activatable ripple-parent d-flex"
+                    (click)="downloadApp()">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-card-content style="font-size: 14px" class="d-flex align-items-center flex-row justify-content-center ion-text-center w-100 h-100">
-              <ion-label>אוהבים את Dibs? רוצים לקבוע את כל התורים שלכם במקום אחד? לחצו כאן והזמינו עסקים נוספים כעת!</ion-label>
+            <ion-card-content class="d-flex align-items-center flex-row justify-content-center ion-text-center w-100 h-100">
+              <div class="content-container">
+                <div class="text-container">
+                  <ion-label class="header-text">רוצה לדבר?</ion-label>
+                  <ion-label class="description-text">כמה שאלות קצרות שיעזרו לך לתעד ביומן אישי את מה שעובר עלייך בכל
+                    יום
+                  </ion-label>
+                </div>
+
+                <div>
+                  <ion-icon name="reader-outline"></ion-icon>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="ion-activatable ripple-parent d-flex"
+                    (click)="downloadApp()">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-card-content class="d-flex align-items-center flex-row justify-content-center ion-text-center w-100 h-100">
+              <div class="content-container">
+                <div class="text-container">
+                  <ion-label class="header-text">רוצה שנקשיב?</ion-label>
+                  <ion-label class="description-text"> האפליקצייה תאזין למה שמתרחש סביבך ותודיע לך אם משהו נשמע לא בסדר
+                    יום
+                  </ion-label>
+                </div>
+
+                <div>
+                  <ion-icon name="reader-outline"></ion-icon>
+                </div>
+              </div>
             </ion-card-content>
           </ion-card>
 
