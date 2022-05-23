@@ -31,7 +31,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["src/theme/variables.scss", "src/global.scss", {
+              "input": "src/assets/fontawesome/css/all.min.css"
+            }
+            ],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,

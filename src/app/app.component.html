@@ -1,3 +1,50 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app dir="rtl">
+  <ion-menu menuId="MAIN_MENU" side="end" contentId="main">
+    <ion-header>
+      <ion-toolbar class="menu-toolbar">
+        <ion-menu-toggle menu="MAIN_MENU" class="mt-1">
+          <div id="menu-header" style="height: 70px;" class="flex-row align-items-center" routerLink="/customer/user-profile">
+            <ion-avatar class="mr-2">
+              <img [src]="'https://www.i-arc.co.il/upload/s1_1610434650.jpg'">
+            </ion-avatar>
+            <div class="mr-2 flex-column align-items-start text-right">
+              <ion-label color="dark" style="font-size: 18px;" class="mt-0 mb-0 font-weight-bold">יוסי כהן</ion-label>
+              <ion-label class="font-weight-bold" color="primary" style="font-size: 14px;">ראה/י פרופיל</ion-label>
+            </div>
+          </div>
+        </ion-menu-toggle>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list class="menu-items-list" lines="none">
+        <ion-menu-toggle menu="MAIN_MENU">
+          <ion-item class="ion-no-padding cursor-pointer" detail="false">
+            <div class="align-items-center menu-item d-flex w-100 pt-2 pb-2 pr-3 mt-1 mb-1">
+              <div class="icon-container">
+                <i class="fas fa-question"></i>
+              </div>
+              <ion-label class="mr-2">תמיכה טכנית</ion-label>
+            </div>
+          </ion-item>
+          <ion-item class="ion-no-padding cursor-pointer" detail="false">
+            <div class="align-items-center menu-item d-flex w-100 pt-2 pb-2 pr-3 mt-1 mb-1">
+              <div class="icon-container">
+                <i class="fas fa-headset"></i>
+              </div>
+              <ion-label class="mr-2">צרו קשר</ion-label>
+            </div>
+          </ion-item>
+          <ion-item class="ion-no-padding cursor-pointer" detail="false">
+            <div class="align-items-center menu-item d-flex w-100 pt-2 pb-2 pr-3 mt-1 mb-1">
+              <div class="icon-container">
+              </div>
+              <ion-label class="mr-2">אודות</ion-label>
+            </div>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main" animated="false"></ion-router-outlet>
 </ion-app>
