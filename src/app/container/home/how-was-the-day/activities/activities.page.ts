@@ -10,9 +10,9 @@ export class ActivitiesPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.feelingsService.fetchAll().subscribe(feelings => {
-      this.feelings = feelings.slice();
-    });
+    // this.feelingsService.fetchAll().subscribe(feelings => {
+    //   this.feelings = feelings.slice();
+    // });
   }
 
 }

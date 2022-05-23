@@ -3,15 +3,21 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="MAIN_MENU"></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon name="mic-outline"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-content>
     <ion-grid>
-      <ion-row class="ion-justify-content-center ion-text-right">
+      <ion-row style="height: 20%; display: flex;" class="ion-justify-content-center ion-text-right">
         <ion-col size-md="9" size-lg="7" size-xl="5">
-          <h1 class="font-weight-bold mt-1 mr-3">שלום אהובה </h1>
+          <div style="display:flex; flex-direction: column; justify-content: space-around;height: 100%">
+            <span style="font-size: 25pt" class="font-weight-bold mt-1 mr-3">שלום אהובה </span>
+            <span style="font-size: 20pt" class="mt-1 mr-3">מה שלומך היום?</span>
+          </div>
         </ion-col>
       </ion-row>
       <ion-row class="ion-justify-content-center">
