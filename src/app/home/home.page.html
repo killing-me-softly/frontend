@@ -9,24 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-tabs>
     <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="my-appointments">
+        <ion-icon name="calendar-clear"></ion-icon>
+        <ion-label>יומן אישי</ion-label>
+      </ion-tab-button>
       <ion-tab-button tab="home">
         <ion-icon name="home"></ion-icon>
         <ion-label>בית</ion-label>
       </ion-tab-button>
-
-      <ion-tab-button routerLink="/create-appointment">
-        <ion-icon name="add-circle"></ion-icon>
-        <ion-label>קביעת תור</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button tab="my-appointments">
-        <ion-icon name="calendar-clear"></ion-icon>
-        <ion-label>תורים</ion-label>
-      </ion-tab-button>
-
       <ion-tab-button tab="my-tickets">
         <ion-icon name="ticket"></ion-icon>
-        <ion-label>כרטיסיות</ion-label>
+        <ion-label>לחצן מצוקה</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>

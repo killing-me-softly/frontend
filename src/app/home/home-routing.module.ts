@@ -12,18 +12,18 @@ const routes: Routes = [
         redirectTo: 'home',
         pathMatch: 'full'
       },
-      {
-        path: 'home',
-        loadChildren: () => import('./customer-home/customer-home.module').then(m => m.CustomerHomeModule)
-      },
-      {
-        path: 'my-appointments',
-        loadChildren: () => import('./my-appointments/my-appointments.module').then( m => m.MyAppointmentsPageModule)
-      },
-      {
-        path: 'my-tickets',
-        loadChildren: () => import('./my-tickets/my-tickets.module').then( m => m.MyTicketsPageModule)
-      }
+      // {
+      //   path: 'home',
+      //   loadChildren: () => import('./customer-home/customer-home.module').then(m => m.CustomerHomeModule)
+      // },
+      // {
+      //   path: 'my-appointments',
+      //   loadChildren: () => import('./my-appointments/my-appointments.module').then( m => m.MyAppointmentsPageModule)
+      // },
+      // {
+      //   path: 'my-tickets',
+      //   loadChildren: () => import('./my-tickets/my-tickets.module').then( m => m.MyTicketsPageModule)
+      // }
     ],
   }
 ];
