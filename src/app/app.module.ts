@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FeelingsService } from './services/feelings.service';
+import { DataService } from './services/feelings.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -17,7 +17,7 @@ import { MatStepperModule } from '@angular/material/stepper';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, FeelingsService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
