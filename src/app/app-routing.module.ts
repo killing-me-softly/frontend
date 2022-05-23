@@ -4,17 +4,22 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./container/container.module').then( m => m.ContainerPageModule)
+    loadChildren: () => import('./container/container.module').then(m => m.ContainerPageModule)
+  },
+  {
+    path: 'container',
+    loadChildren: () => import('./container/container.module').then(m => m.ContainerPageModule)
+  },
+  {
+    path: 'feelings',
+    loadChildren: () => import('./feelings/feelings.module').then(m => m.FeelingsPageModule)
   },
   {
     path: '',
     redirectTo: 'container',
     pathMatch: 'full'
   },
-  {
-    path: 'container',
-    loadChildren: () => import('./container/container.module').then( m => m.ContainerPageModule)
-  },
+
 ];
 
 @NgModule({
