@@ -8,11 +8,6 @@ const routes: Routes = [
     path: '',
     component: HowWasTheDayPage
   },
-
-  {
-    path: 'activities',
-    loadChildren: () => import('./activities/activities.module').then( m => m.ActivitiesPageModule)
-  },
   {
     path: 'what-did-he-say',
     loadChildren: () => import('./what-did-he-say/what-did-he-say.module').then( m => m.WhatDidHeSayPageModule)

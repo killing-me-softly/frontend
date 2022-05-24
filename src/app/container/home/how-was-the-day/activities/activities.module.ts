@@ -15,6 +15,9 @@ import { ActivitiesPage } from './activities.page';
     IonicModule,
     ActivitiesPageRoutingModule
   ],
+  exports: [
+    ActivitiesPage
+  ],
   declarations: [ActivitiesPage]
 })
 export class ActivitiesPageModule {}

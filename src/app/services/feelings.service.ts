@@ -7,12 +7,22 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class FeelingsService {
+export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  fetchAll(): Observable<Feeling[]> {
+  fetchFeelings(): Observable<Feeling[]> {
     const suffix = "feelings";
-    return this.http.get<Feeling[]>(environment.BACKEND_URL + suffix).pipe(tap(_ => console.log("Fetched all feelings" )));
+    return this.http.get<Feeling[]>(environment.BACKEND_URL + suffix).pipe(tap(_ => console.log("Fetched all feelings")));
+  }
+
+  fetchActivities(): Observable<Feeling[]> {
+    const suffix = "feelings";
+    return this.http.get<any>(environment.BACKEND_URL + suffix).pipe(tap(_ => console.log("Fetched all feelings")));
+  }
+
+  fetchSayings(): Observable<Feeling[]> {
+    const suffix = "feelings";
+    return this.http.get<any>(environment.BACKEND_URL + suffix).pipe(tap(_ => console.log("Fetched all feelings")));
   }
 }

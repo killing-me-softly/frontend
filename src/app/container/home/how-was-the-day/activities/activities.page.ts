@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/feelings.service';
 
 @Component({
   selector: 'app-activities',
@@ -6,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activities.page.scss'],
 })
 export class ActivitiesPage implements OnInit {
-
-  constructor() { }
+  activities: any[];
+  
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    // this.feelingsService.fetchAll().subscribe(feelings => {
-    //   this.feelings = feelings.slice();
-    // });
+    this.dataService.fetchActivities().subscribe(activities => {
+      this.activities = activities.slice();
+    });
   }
 
 }
