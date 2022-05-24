@@ -24,14 +24,9 @@ export class WeeklySummaryPage implements OnInit {
   }
 
   transferToTelegramChat(): void {
-    this.supportersService.connectUserToSupporter();
+    this.supportersService.transferToTelegramChat();
   }
 
-  moveToHowWasYourDay(): void {
-    this.navController.navigateForward('/container/home/weekly-summary');
-    // this.navController.navigateForward('/container/home/how-was-the-day');
-
-  }
 
   async startRecordingNotification() {
     const message = this.recordingActivate? "ההקלטה הסתיימה": "התחילי להקליט";

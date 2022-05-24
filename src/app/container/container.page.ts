@@ -13,17 +13,11 @@ export class ContainerPage implements OnInit, OnDestroy {
   constructor(private supportersService: SupportersService) {}
 
   ngOnInit() {}
+
   transferToTelegramChat(): void {
-    this.connectUserToSupporterSubscription = this.supportersService
-      .connectUserToSupporter()
-      .subscribe((supporters) => {
-        const selectedSupporter =
-          supporters[Math.floor(Math.random() * supporters.length)];
-        window.open(
-          `${environment.TELEGRAM_ENDPOINT}${selectedSupporter?.telegram_user}`
-        );
-      });
+    this.supportersService.transferToTelegramChat();
   }
+
   ngOnDestroy(): void {
     this.connectUserToSupporterSubscription.unsubscribe();
   }
