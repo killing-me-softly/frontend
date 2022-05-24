@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Feeling } from '../models/feeling';
 import { Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { supporter } from '../models/supporter';
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +26,12 @@ export class DataService {
     const suffix = "feelings";
     return this.http.get<any>(environment.BACKEND_URL + suffix).pipe(tap(_ => console.log("Fetched all feelings")));
   }
+
+  fetchSupporters(): Observable<supporter[]> {
+    const suffix = 'supporters';
+    return this.http
+      .get<supporter[]>(environment.BACKEND_URL + suffix)
+      .pipe(tap((_) => console.log('Fetched all supporters')));
+  }
+
 }

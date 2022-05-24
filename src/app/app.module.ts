@@ -12,12 +12,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
+import { SupportersService } from './services/supporters.service';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DataService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DataService, SupportersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
