@@ -21,8 +21,8 @@ export class LogInComponent implements OnInit {
   }
 
   signIn() {
-    const navigationDetails : string [] = ['/container'];
-    navigationDetails.push('sign-in');
+    const navigationDetails : string [] = ['sign-in'];
+    //navigationDetails.push('sign-in');
     this.router.navigate(navigationDetails);
   }
 }
