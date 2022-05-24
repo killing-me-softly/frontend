@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/feelings.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-activities',
@@ -7,7 +7,7 @@ import { DataService } from 'src/app/services/feelings.service';
   styleUrls: ['./activities.page.scss'],
 })
 export class ActivitiesPage implements OnInit {
-  activities: any[];
+  activities: string[];
   
   constructor(private dataService: DataService) { }
 

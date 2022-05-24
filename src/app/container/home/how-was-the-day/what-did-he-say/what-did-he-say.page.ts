@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Feeling } from 'src/app/models/feeling';
-import { DataService } from 'src/app/services/feelings.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-what-did-he-say',
@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/feelings.service';
   styleUrls: ['./what-did-he-say.page.scss'],
 })
 export class WhatDidHeSayPage implements OnInit {
-  sayings: Feeling[];
+  sayings: string[];
 
   constructor(private dataService: DataService) { }
 
