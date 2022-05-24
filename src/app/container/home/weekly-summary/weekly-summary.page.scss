@@ -1,0 +1,124 @@
+ion-grid {
+  height: 100%;
+}
+
+ion-card {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+ion-card-content {
+  font-size: 100%;
+}
+
+ion-button {
+  --ion-color-secondary: #006600;
+}
+
+ion-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ion-icon {
+  font-size: 390%;
+  padding-right: 5%;
+}
+
+.header-text {
+  font-size: 170%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description-text {
+  width: 85%;
+  font-size: 102%;
+  padding-bottom: 10%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: green;
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+}
+
+* {
+  color: #67926f;
+}
+
+app-how-was-the-day {
+  overflow-y: hidden !important;
+}
+
+.sum-title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 45%;
+  padding-top: 5%;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.unchosen-icon {
+  color: gray;
+  opacity: 0.25;
+}
+
+.chosen-icon {
+  color: red;
+  transform: scale(1.75, 1.75);
+  padding-left: 2.5%;
+  padding-bottom: 3.5%;
+}
+
+.chat-icon {
+  transform: scaleX(-1);
+  margin-right: 5%;
+  font-size: 350%;
+}
+
+.days-container {
+  padding-top: 15%;
+  color: lightpink;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: baseline;
+  align-items: end;
+  height: 15vh;
+}
+
+.days-item {
+  color: lightpink;
+  font-size: 150%;
+  width: 0;
+  flex-grow: 1;
+  min-width: 1.5vw;
+}
+
+.weekly-event-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.weely-event-bar {
+  display: inline-block;
+  background-color: green;
+  height: 100%;
+  border-radius: 10px;
+}

@@ -29,7 +29,12 @@ const routes: Routes = [
   {
     path: 'how-was-the-day',
     loadChildren: () => import('./how-was-the-day/how-was-the-day.module').then( m => m.HowWasTheDayPageModule)
+  },
+  {
+    path: 'weekly-summary',
+    loadChildren: () => import('./weekly-summary/weekly-summary.module').then( m => m.WeeklySummaryPageModule)
   }
+  
 ];
 
 @NgModule({
