@@ -1,9 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>what-did-he-say</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="sayings-page">
+    <h1>מה הוא אמר לך היום ?</h1>
+    <div class="sayings-box" class="page">
+      <div *ngFor="let saying of sayings">
+        <ion-button (click)="(editSaying(saying))" class="saying"  color="danger"
+                    [class.unselected]="!isSayingSelected(saying)">
+          <div class="button-box">
+            <ion-label class="text">{{saying}}</ion-label>
+            <ion-label class="icon">
+              <ion-icon name="sad-outline" style="float:left"></ion-icon>
+            </ion-label>
+          </div>
+        </ion-button>
+        <br>
+      </div>
+    </div>
+  </div>
 </ion-content>

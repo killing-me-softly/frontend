@@ -1,23 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>feelings</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div class="feelings-page">
-    <div class="feelings-box">
+    <h1>מה הרגשת היום ?</h1>
+    <div class="feelings-box" class="page">
       <div *ngFor="let feeling of feelings">
-        <ion-button class="feeling" color="danger">
-          <ion-label class="text">{{feeling.hebrew_name}}</ion-label>
-          <ion-label class="icon">
-            <ion-icon name="sad-outline" style="float:left"></ion-icon>
-          </ion-label>
+        <ion-button (click)="editFeeling(feeling)" class="feeling" color="danger"
+                    [class.unselected]="!isFeelingSelected(feeling)">
+          <div class="button-box">
+            <ion-label class="text">{{feeling}}</ion-label>
+            <ion-label class="icon">
+              <ion-icon name="sad-outline" style="float:left"></ion-icon>
+            </ion-label>
+          </div>
         </ion-button>
         <br>
       </div>
+      <br>
+      <ion-button class="feeling" color="medium" (click)="finish()">סיום</ion-button>
     </div>
   </div>
-
-
 </ion-content>

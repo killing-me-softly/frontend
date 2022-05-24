@@ -1,0 +1,25 @@
+.sayings-box {
+  padding: 10%;
+  text-align: center;
+}
+
+.saying {
+  width: 80%;
+  --border-radius: 25px;
+}
+
+.unselected {
+  opacity: 0.7;
+}
+
+.button-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page{
+  overflow-y: hidden;
+  height: 100%;
+  overflow:hidden;
+}

@@ -15,6 +15,9 @@ import { WhatDidHeSayPage } from './what-did-he-say.page';
     IonicModule,
     WhatDidHeSayPageRoutingModule
   ],
+  exports: [
+    WhatDidHeSayPage
+  ],
   declarations: [WhatDidHeSayPage]
 })
 export class WhatDidHeSayPageModule {}

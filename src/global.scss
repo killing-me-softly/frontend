@@ -25,6 +25,36 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@font-face {
+  font-family: Rubik;
+  src: url('../src/assets/fonts/Rubik-Regular.ttf');
+}
+
 .tabs-inner {
   background-color: #faebd7;
+}
+
+.mat-horizontal-content-container {
+  height: 100%;
+}
+
+.mat-horizontal-stepper-content {
+  height: 80%;
+}
+
+ion-card {
+  background-color: white;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.mic-start {
+  font-size: 28pt !important;
+  color: #67926f;
+}
+
+ion-menu-button {
+  color: #67926f;
 }

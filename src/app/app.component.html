@@ -3,13 +3,12 @@
     <ion-header>
       <ion-toolbar class="menu-toolbar">
         <ion-menu-toggle menu="MAIN_MENU" class="mt-1">
-          <div id="menu-header" style="height: 70px;" class="flex-row align-items-center" routerLink="/customer/user-profile">
+          <div id="menu-header" style="height: 70px;" class="flex-row align-items-center">
             <ion-avatar class="mr-2">
-              <img [src]="'https://www.i-arc.co.il/upload/s1_1610434650.jpg'">
+              <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6n92rgmFWUfcUDhfRrRNIe7oGEQFcStSvmA&usqp=CAU'">
             </ion-avatar>
             <div class="mr-2 flex-column align-items-start text-right">
-              <ion-label color="dark" style="font-size: 18px;" class="mt-0 mb-0 font-weight-bold">יוסי כהן</ion-label>
-              <ion-label class="font-weight-bold" color="primary" style="font-size: 14px;">ראה/י פרופיל</ion-label>
+              <ion-label color="dark" style="font-size: 18px;" class="mt-0 mb-0 font-weight-bold">דנה דנה</ion-label>
             </div>
           </div>
         </ion-menu-toggle>
@@ -46,5 +45,5 @@
     </ion-content>
   </ion-menu>
 
-  <ion-router-outlet id="main" animated="false"></ion-router-outlet>
+  <ion-router-outlet id="main" [animated]="false"></ion-router-outlet>
 </ion-app>

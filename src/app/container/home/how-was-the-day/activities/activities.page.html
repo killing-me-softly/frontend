@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>activities</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="activities-page">
+    <h1>
+      האם הוא עושה אחת מהפעולות האלה ?
+    </h1>
+    <div class="activities-box" class="page">
+      <div *ngFor="let activity of activities">
+        <ion-button (click)="(editActivity(activity))" class="activity"  color="danger"
+                    [class.unselected]="!isActivitySelected(activity)">
+            <div class="button-box">
+              <ion-label class="text">{{activity}}</ion-label>
+              <ion-label class="icon">
+                <ion-icon name="sad-outline" style="float:left"></ion-icon>
+              </ion-label>
+            </div>
+        </ion-button>
+        <br>
+      </div>
+    </div>
+  </div>
 </ion-content>
