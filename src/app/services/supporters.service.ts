@@ -4,6 +4,7 @@ import { supporter } from '../models/supporter';
 import { Observable, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Constants } from '../config/constants';
+import { DataService } from './feelings.service';
 
 const telegramUsersMock: Observable<supporter[]> = of([
   {
@@ -17,17 +18,10 @@ const telegramUsersMock: Observable<supporter[]> = of([
   providedIn: 'root',
 })
 export class SupportersService {
-  constructor(private http: HttpClient, private constants: Constants) {}
-
-  fetchSupporters(): Observable<supporter[]> {
-    const suffix = 'supporters';
-    return this.http
-      .get<supporter[]>(environment.BACKEND_URL + suffix)
-      .pipe(tap((_) => console.log('Fetched all supporters')));
-  }
+  constructor(private http: HttpClient, private constants: Constants, private dataService: DataService ) {}
 
   connectUserToSupporter(): void {
-    //todo when the server is up switch to this.fetchSupporters
+    //todo when the server is up switch to dataService.fetchSupporters
     telegramUsersMock.subscribe((supporters) => {
       const selectedSupporter =
         supporters[Math.floor(Math.random() * supporters.length)];
