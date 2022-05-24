@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavController, ToastController } from '@ionic/angular';
+import { NavController, ToastController, ToastOptions } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,13 @@ import { NavController, ToastController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  recordingActivate: boolean = false;
+  recordingActivate = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  toastOptions: ToastOptions = {
+    duration: 2000,
+    color: 'light',
+  };
 
   constructor(
     private formBuilder: FormBuilder,
@@ -27,18 +31,41 @@ export class HomePage implements OnInit {
     });
   }
 
+  toggleRecordingActive() {
+    this.recordingActivate = !this.recordingActivate;
+    if (this.recordingActivate) {
+      this.startRecordingNotification();
+    } else {
+      this.stopRecordingNotification();
+    }
+  }
+
   moveToHowWasYourDay(): void {
     this.navController.navigateForward('/container/home/how-was-the-day');
   }
 
   async startRecordingNotification() {
-    const message = this.recordingActivate? "ההקלטה הסתיימה": "התחילי להקליט";
-    this.recordingActivate = !this.recordingActivate;
+    const message = 'התחילי להקליט';
+    await this.toast(message);
+  }
+
+  async stopRecordingNotification() {
+    let message = 'ההקלטה הסתיימה';
+    await this.toast(message);
+    await this.delay(2.5 * 1000);
+    message = 'מנתח את ההקלטה..';
+    await this.toast(message);
+  }
+
+  async toast(message) {
     const toast = await this.toastController.create({
-      message: message,
-      duration: 2000,
-      color: "light",
+      message,
+      ...this.toastOptions,
     });
     toast.present();
+  }
+
+  async delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }
