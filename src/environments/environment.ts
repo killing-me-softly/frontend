@@ -3,9 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  BACKEND_URL: 'http://192.168.1.50:3500/',
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  BACKEND_URL: 'https://killing-me-softly.herokuapp.com',
 
-  production: false
+  production: false,
 };
 
 /*
