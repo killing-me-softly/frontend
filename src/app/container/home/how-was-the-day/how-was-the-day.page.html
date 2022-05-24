@@ -10,8 +10,8 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="page">
-      <mat-stepper style="height: 100%;">
+    <ion-content>
+      <mat-stepper class="page">
         <mat-step>
           <app-what-did-he-say></app-what-did-he-say>
           <div>
@@ -20,7 +20,7 @@
         </mat-step>
         <mat-step>
           <app-activities></app-activities>
-          <div>
+          <div class="next-previous-buttons">
             <button mat-raised-button color="accent" matStepperPrevious>הקודם</button>
             <button mat-raised-button color="accent" matStepperNext>הבא</button>
           </div>
@@ -29,7 +29,6 @@
           <app-feelings></app-feelings>
           <div>
             <button mat-raised-button color="accent" matStepperPrevious>הקודם</button>
-            <button mat-raised-button color="accent" matStepperNext>הבא</button>
           </div>
         </mat-step>
         <!-- Icon overrides. -->

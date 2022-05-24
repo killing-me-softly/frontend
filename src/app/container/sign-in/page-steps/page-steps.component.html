@@ -1,0 +1,6 @@
+<div class="steps">
+    <div class="line"></div>
+    <div class="dots">
+        <div *ngFor="let page of pagesArray, let i=index" class="dot" [ngClass]="{'chosen': checkChosen(i), 'passed' : checkPassed(i)}" (click)="clickDot(i)"></div>
+    </div>
+</div>

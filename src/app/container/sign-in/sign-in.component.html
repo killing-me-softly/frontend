@@ -1,0 +1,113 @@
+<div class="sign-in-container">
+   <app-page-steps [pages]="numberOfPages" [(currentPage)]="currentPage" (chosenPage)="getChosenPage($event)"></app-page-steps>
+    <div *ngIf="currentPage === 0" class="page-body">
+        <div class="title">שלום וברוכה הבאה</div>
+        <div class="description">
+            אנחנו שמחים שאת מצטרפת אלינו.
+            <br/>
+הפרטיות שלך לא בסכנה ותישמר היטב.
+        </div>
+        <div class="details">
+                <span>
+                    שם (את יכולה להשתמש בשם בדוי)*
+                </span>
+                <input type="text"/>
+                <span>
+                     טלפון*
+                </span>
+                <input type="number" />
+                <span>
+                    סיסמא*
+                </span>
+                <input type="password"/>
+                <span>
+                    הקישי סיסמא שנית*
+                </span>
+                <input type="password"/>
+        </div>
+
+    </div>
+
+
+    <div *ngIf="currentPage === 1"  class="page-body">
+        <div class="title">כמה פרטים</div>
+        <div class="description">
+            הפרטיות שלך לא בסכנה ותישמר היטב.
+            <br/>
+אנחנו משתמשים בפרטים רק כדי לתת לך הערכת 
+<br/>
+מסוכנות 
+טובה יותר ולהתאים לך אחת שיודעת.
+        </div>
+        <div class="details">
+                <span>
+                גיל
+                </span>
+                <input type="number"/>
+                <span>
+                     כתובת
+                </span>
+                <input type="text" />
+                <span>
+                    מספר ילדים
+                </span>
+                <input type="number"/>
+                <span>
+                    כמה זמן את בזוגיות הזאת?
+                </span>
+                <input type="text"/>
+        </div>
+
+    </div>
+    <div *ngIf="currentPage === 2"  class="page-body">
+        <div class="title">אנשי קשר לחירום</div>
+        <div class="description">
+            הפרטיות שלך לא בסכנה ותישמר היטב.
+            <br/>
+            לבחירתך, הודעה או שיחה תצא לאשת הקשר
+        </div>
+        <div class="details">
+            <div *ngFor="let contact of contacts" class="contact-block">
+                <div class="detail-block">
+                <span>
+                שם
+                </span>
+                <input type="text"/>
+              </div>
+              <div class="detail-block">
+                <span>
+                    טלפון
+                    </span>
+                <input type="number"/>
+              </div>
+            </div>
+            <div class="plus-contact">
+                <img src="../../../assets/icon/plus-contact.png" (click)="addContact()"/>
+                <span style="margin-right: 5px;">אנשי קשר נוספים</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="buttons">
+        <button [ngClass]="{'dont-show' : currentPage ===0}" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path d="M1 17C4.59559 14.632 6.38109 12.9806 8.65054 9.53812C8.86534 9.2123 8.86534 8.7877 8.65054 8.46188C6.38109 5.01939 4.59559 3.36803 1 1" stroke="#1C033A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                הקודם
+        </button>
+        <button *ngIf="currentPage!=numberOfPages-1" (click)="next()">
+            הבא
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path d="M9 17C5.40441 14.632 3.61891 12.9806 1.34946 9.53812C1.13466 9.2123 1.13466 8.7877 1.34946 8.46188C3.61891 5.01939 5.40441 3.36803 9 1" stroke="#1C033A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </button>
+        <button *ngIf="currentPage === numberOfPages-1" (click)="finish()">
+            הרשמי!
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path d="M9 17C5.40441 14.632 3.61891 12.9806 1.34946 9.53812C1.13466 9.2123 1.13466 8.7877 1.34946 8.46188C3.61891 5.01939 5.40441 3.36803 9 1" stroke="#1C033A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </button>
+    </div>
+
+</div>
+
