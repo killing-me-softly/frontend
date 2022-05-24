@@ -3,8 +3,8 @@
     <h1>מה הרגשת היום ?</h1>
     <div class="feelings-box">
       <div *ngFor="let feeling of feelings">
-        <ion-button [class.selected]="howWasYourDayService.feelings.includes(feeling.hebrew_name)" (click)="editFeeling(feeling.hebrew_name)" class="feeling" color="danger">
-          <ion-label class="text">{{feeling.hebrew_name}}</ion-label>
+        <ion-button class="feeling" color="danger">
+          <ion-label class="text">{{feeling}}</ion-label>
           <ion-label class="icon">
             <ion-icon name="sad-outline" style="float:left"></ion-icon>
           </ion-label>

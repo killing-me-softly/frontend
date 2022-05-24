@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../../../services/feelings.service';
+import { DataService } from '../../../../services/data.service';
 import { Feeling } from '../../../../models/feeling';
 import {HowWasYourDayService} from '../how-was-your-day.service';
 
@@ -9,7 +9,7 @@ import {HowWasYourDayService} from '../how-was-your-day.service';
   styleUrls: ['./feelings.page.scss'],
 })
 export class FeelingsPage implements OnInit {
-  feelings: Feeling[];
+  feelings: string[];
 
   constructor(
     private dataService: DataService,
