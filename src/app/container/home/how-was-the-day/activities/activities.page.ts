@@ -16,5 +16,4 @@ export class ActivitiesPage implements OnInit {
       this.activities = activities.slice();
     });
   }
-
 }

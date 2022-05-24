@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../../../services/data.service';
 import { Feeling } from '../../../../models/feeling';
-import {HowWasYourDayService} from '../how-was-your-day.service';
+import { HowWasYourDayService } from '../how-was-your-day.service';
 
 @Component({
   selector: 'app-feelings',
@@ -14,12 +14,16 @@ export class FeelingsPage implements OnInit {
   constructor(
     private dataService: DataService,
     private howWasYourDayService: HowWasYourDayService
-              ) { }
+  ) { }
 
   ngOnInit() {
     this.dataService.fetchFeelings().subscribe(feelings => {
       this.feelings = feelings.slice();
     });
+  }
+
+  finish() {
+    alert('סיימתי את השאלון');
   }
 
   editFeeling(feelingName: string) {

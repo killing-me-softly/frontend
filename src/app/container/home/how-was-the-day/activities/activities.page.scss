@@ -1,7 +1,4 @@
 .activities-box {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
     padding: 10%;
     text-align: center;
   }
@@ -10,8 +7,10 @@
     width: 80%;
     --border-radius: 25px;
   }
-  
-  .text{
-    margin-left: 50%;
+
+  .button-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   

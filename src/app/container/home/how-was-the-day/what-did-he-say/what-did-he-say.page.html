@@ -1,13 +1,15 @@
 <ion-content>
   <div class="sayings-page">
-    <h1>מה הרגשת היום ?</h1>
+    <h1>מה הוא אמר לך היום ?</h1>
     <div class="sayings-box">
       <div *ngFor="let saying of sayings">
         <ion-button class="saying" color="danger">
-          <ion-label class="text">{{saying}}</ion-label>
-          <ion-label class="icon">
-            <ion-icon name="sad-outline" style="float:left"></ion-icon>
-          </ion-label>
+          <div class="button-box">
+            <ion-label class="text">{{saying}}</ion-label>
+            <ion-label class="icon">
+              <ion-icon name="sad-outline" style="float:left"></ion-icon>
+            </ion-label>
+          </div>
         </ion-button>
         <br>
       </div>
