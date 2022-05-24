@@ -3,7 +3,8 @@
     <h1>מה הוא אמר לך היום ?</h1>
     <div class="sayings-box">
       <div *ngFor="let saying of sayings">
-        <ion-button class="saying" color="danger">
+        <ion-button (click)="(editSaying(saying))" class="saying"
+                    color="{{isSayingSelected(saying) ? 'dark' : 'danger'}}">
           <div class="button-box">
             <ion-label class="text">{{saying}}</ion-label>
             <ion-label class="icon">

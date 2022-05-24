@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../../../services/data.service';
-import { Feeling } from '../../../../models/feeling';
 import { HowWasYourDayService } from '../how-was-your-day.service';
 
 @Component({
@@ -20,6 +19,10 @@ export class FeelingsPage implements OnInit {
     this.dataService.fetchFeelings().subscribe(feelings => {
       this.feelings = feelings.slice();
     });
+  }
+
+  isFeelingSelected(feeling: string): boolean {
+    return this.howWasYourDayService.feelings.includes(feeling);
   }
 
   finish() {
