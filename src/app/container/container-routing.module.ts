@@ -16,6 +16,14 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'log-in',
+        loadChildren: () => import('./log-in/log-in.module').then(m => m.LogInComponentModule)
+      },
+      {
+        path: 'sign-in',
+        loadChildren: () => import('./sign-in/sign-in.module').then(m => m.SignInComponentModule)
       }
     ],
   }

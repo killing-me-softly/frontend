@@ -1,0 +1,106 @@
+.sign-in-container {
+
+}
+
+::ng-deep {
+    .steps {
+        margin-top: 50px;
+    }
+}
+
+.page-body {
+    margin-top: 45px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    background-image : linear-gradient(191.84deg, #320A64 -0.4%, #D1037E 98.25%, #D0007D 99.29%);
+    background-clip: text;
+    color: transparent;
+    font-family: Arial, 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    height: 33px;
+}
+
+.description {
+    font-family: Arial, 'Open Sans Hebrew';
+    font-style: normal;
+    //margin-top: 15px;
+    //margin-left: 55px;
+}
+
+.details {
+    display: flex;
+    flex-flow: column;
+}
+
+span {
+    color : black;
+    font-size: 15px;
+    margin-top:10px;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #8C0436;
+    width: 40px;
+    width: 276px;
+    height: 35px;
+    border-color : linear-gradient(191.84deg, #320A64 -0.4%, #D1037E 98.25%, #D0007D 99.29%);
+}
+
+.contact-block {
+    margin-top: 15px;
+}
+
+.plus-contact {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row;
+}
+
+.buttons {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: 10%;
+    bottom: 30px;
+}
+
+button {
+    border: 1px solid #8C0436;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 140px;
+    background-image : linear-gradient(191.84deg, #320A64 -0.4%, #D1037E 98.25%, #D0007D 99.29%);
+    background-clip: text;
+    color: transparent;
+    font-size:15px;
+    width: 100px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+svg {
+    width: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.dont-show {
+   opacity: 0;
+}
