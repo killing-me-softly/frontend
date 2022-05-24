@@ -2,17 +2,18 @@
   <div class="title">אחת שיודעת.</div>
   <div class="inputs-container">
     <span>שם</span>
-    <input type="text"/>
+    <input type="text" [(ngModel)]="name"/>
     <span>סיסמא</span>
-    <input type="password"/>
+    <input type="password" [(ngModel)]="password"/>
   </div>
 
   <div class="buttons">
-    <button>
+    <button (click)="signIn()">
       הרשמי
     </button>
-    <button>
+    <button (click)="logIn()">
       התחברי
     </button>
   </div>
 </div>
+<img src="../../../assets/icon/bottom-background.png" style="width:100%"/>
