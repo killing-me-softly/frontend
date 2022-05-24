@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { DataService } from '../../../../services/data.service';
 import { HowWasYourDayService } from '../how-was-your-day.service';
 
@@ -12,7 +13,8 @@ export class FeelingsPage implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private howWasYourDayService: HowWasYourDayService
+    private howWasYourDayService: HowWasYourDayService,
+    private navController: NavController,
   ) { }
 
   ngOnInit() {
@@ -26,7 +28,7 @@ export class FeelingsPage implements OnInit {
   }
 
   finish() {
-    alert('סיימתי את השאלון');
+        this.navController.navigateForward('/container/home/weekly-summary');
   }
 
   editFeeling(feelingName: string) {
