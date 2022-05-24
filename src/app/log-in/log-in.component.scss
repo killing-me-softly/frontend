@@ -1,3 +1,7 @@
+* {
+    font-family: Rubik;
+}
+
 .sign-in-container {
     margin-top: 120px;
     display: flex;
@@ -5,10 +9,8 @@
 }
 
 .title {
-    background-image : linear-gradient(191.84deg, #320A64 -0.4%, #D1037E 98.25%, #D0007D 99.29%);
-    background-clip: text;
-    color: transparent;
-    font-family: Arial, 'Open Sans Hebrew';
+    color: #67926f;
+    font-family: Rubik;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -32,11 +34,11 @@ span {
 
 input {
     border-radius: 10px;
-    border: 1px solid #8C0436;
+    border: 1px solid #67926f;
     width: 40px;
     width: 276px;
     height: 35px;
-    border-color : linear-gradient(191.84deg, #320A64 -0.4%, #D1037E 98.25%, #D0007D 99.29%);
+    border-color : #67926f;
 }
 
 .buttons {
@@ -49,12 +51,11 @@ input {
 }
 
 button {
-    border: 1px solid #8C0436;
+    border: 1px solid #67926f;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 140px;
-    background-image : linear-gradient(191.84deg, #320A64 -0.4%, #D1037E 98.25%, #D0007D 99.29%);
     background-clip: text;
-    color: transparent;
+    color: #67926f;
     font-size:15px;
     width: 100px;
     height: 36px;
