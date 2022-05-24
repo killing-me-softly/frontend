@@ -3,7 +3,7 @@
     <h1>
       האם הוא עושה אחת מהפעולות האלה ?
     </h1>
-    <div class="activities-box">
+    <div class="activities-box" class="page">
       <div *ngFor="let activity of activities">
         <ion-button (click)="(editActivity(activity))" class="activity"
                     color="{{isActivitySelected(activity) ? 'dark' : 'danger'}}">
