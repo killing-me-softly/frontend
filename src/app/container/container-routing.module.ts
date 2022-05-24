@@ -18,8 +18,8 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'sign-in',
-        loadChildren: () => import('./sign-in-form/sign-in-form.module').then(m => m.SignInFormModule)
+        path: 'log-in',
+        loadChildren: () => import('./log-in/log-in.module').then(m => m.logInComponentModule)
       }
     ],
   }
