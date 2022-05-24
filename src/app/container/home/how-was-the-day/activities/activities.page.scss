@@ -1,16 +1,19 @@
 .activities-box {
-    padding: 10%;
-    text-align: center;
-  }
-  
-  .activity{
-    width: 80%;
-    --border-radius: 25px;
-  }
+  padding: 10%;
+  text-align: center;
+}
 
-  .button-box {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
+.activity {
+  width: 80%;
+  --border-radius: 25px;
+}
+
+.unselected {
+  opacity: 0.4;
+}
+
+.button-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
