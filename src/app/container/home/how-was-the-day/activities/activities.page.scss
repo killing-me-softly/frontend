@@ -8,6 +8,10 @@
   --border-radius: 25px;
 }
 
+.unselected {
+  opacity: 0.4;
+}
+
 .button-box {
   width: 100%;
   display: flex;

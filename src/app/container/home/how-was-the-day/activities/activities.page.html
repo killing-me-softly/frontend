@@ -5,8 +5,8 @@
     </h1>
     <div class="activities-box" class="page">
       <div *ngFor="let activity of activities">
-        <ion-button (click)="(editActivity(activity))" class="activity"
-                    color="{{isActivitySelected(activity) ? 'dark' : 'danger'}}">
+        <ion-button (click)="(editActivity(activity))" class="activity"  color="danger"
+                    [class.unselected]="!isActivitySelected(activity)">
             <div class="button-box">
               <ion-label class="text">{{activity}}</ion-label>
               <ion-label class="icon">

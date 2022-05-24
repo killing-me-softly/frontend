@@ -1,10 +1,10 @@
 <ion-content>
   <div class="feelings-page">
     <h1>מה הרגשת היום ?</h1>
-    <div class="feelings-box" class="page">
-      <div *ngFor="let feeling of feelings"> 
-        <ion-button (click)="editFeeling(feeling)" class="feeling"
-                    color="{{isFeelingSelected(feeling) ? 'dark' : 'danger'}}">
+    <div class="feelings-box">
+      <div *ngFor="let feeling of feelings">
+        <ion-button (click)="editFeeling(feeling)" class="feeling" color="danger"
+                    [class.unselected]="!isFeelingSelected(feeling)">
           <div class="button-box">
             <ion-label class="text">{{feeling}}</ion-label>
             <ion-label class="icon">
